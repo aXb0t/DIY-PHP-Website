@@ -2,7 +2,7 @@
 
 include 'template_eng.inc';
 
-// list of pages
+// list of pages (nav)
 $pages = [
   '/' => 'Home',
   '/hello' => 'Hello',
@@ -14,8 +14,7 @@ foreach ($pages as $url => $title) {
   echo "<a href=\"$url\">$title</a><br>";
 }
 
-$template = $twig->load('index.html');
-
+// require "router"
 // get request
 $request = $_SERVER['REQUEST_URI'];
 $views_dir = '/views/';
@@ -34,3 +33,5 @@ switch ($request) {
   default:
     require __DIR__ . $views_dir . 'oops.php';
 }
+
+echo $twig->render('index.html');

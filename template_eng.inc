@@ -2,6 +2,8 @@
 
 require_once 'vendor/autoload.php';
 
-$loader = new \Twig\Loader\FilesystemLoader('templates');
+$template_dir = 'templates';
+
+$loader = new \Twig\Loader\FilesystemLoader([$template_dir]);
 $twig = new \Twig\Environment($loader);
 
