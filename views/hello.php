@@ -1,3 +1,3 @@
 <?php
 
-echo "Hello!";
+echo $twig->render('hello.html');

@@ -34,4 +34,4 @@ switch ($request) {
     require __DIR__ . $views_dir . 'oops.php';
 }
 
-echo $twig->render('index.html');
+
