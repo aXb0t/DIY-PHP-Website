@@ -1,0 +1,9 @@
+{
+    "name": "test/test",
+    "description": "testing",
+    "type": "project",
+    "require": {
+        "pecee/simple-router": "^5.4",
+        "twig/twig": "^3.0"
+    }
+}
