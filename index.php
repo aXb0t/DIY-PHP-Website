@@ -25,6 +25,12 @@ print '</ul>
 $request = $_SERVER['REQUEST_URI'];
 $views_dir = '/views/';
 
+$vars = [
+  'pages' => $pages,
+  'request' => $request,
+  'current_page' => $request
+];
+
 switch ($request) {
   case '':
   case '/':
@@ -39,7 +45,3 @@ switch ($request) {
   default:
     require __DIR__ . $views_dir . 'oops.php';
 }
-
-print '<footer>
-<p>&copy; ' . date('Y') . ' DIY PHP Website. All rights reserved.</p>
-</footer>';

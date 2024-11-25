@@ -1,5 +1,7 @@
 <?php
 
-echo "<h1>HOME</h1>";
+$template = $twig->load('index.html');
+// echo $template->render($vars);
+$vars['current_page'] = 'home';
 
-echo $twig->render('home.html');
+echo $template->render($vars);

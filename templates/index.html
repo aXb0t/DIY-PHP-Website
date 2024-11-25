@@ -1,1 +1,20 @@
+{% include 'header.html' %}
+
 <p>Gettin Twiggy with it.</p>
+
+{% if current_page == 'home' %}
+    {% include 'home.html' %}
+{% elseif current_page == 'hello' %}
+    {% include 'hello.html' %}
+{% elseif current_page == 'goodbye' %}
+    {% include 'goodbye.html' %}
+{% else %}
+    {% include 'oops.html' %}
+{% endif %}
+
+{% include 'footer.html' %}
+
+<div style="border: 1px solid #0f0; padding: 10px; margin-top: 20px; background-color: black; color: #0f0; font-family: 'Courier New', Courier, monospace;">
+    <h3 style="color: #0f0;">Debug Output</h3>
+    <pre>{{ dump() }}</pre>
+</div>
