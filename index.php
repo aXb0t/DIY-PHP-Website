@@ -9,10 +9,16 @@ $pages = [
   '/goodbye' => 'Goodbye'
 ];
 
+print '<header>
+<nav>
+<ul>';
 // echo link to each page
 foreach ($pages as $url => $title) {
-  echo "<a href=\"$url\">$title</a><br>";
+  echo "<li><a href=\"$url\">$title</a></li>";
 }
+print '</ul>
+</nav>
+</header>';
 
 // require "router"
 // get request
@@ -34,4 +40,6 @@ switch ($request) {
     require __DIR__ . $views_dir . 'oops.php';
 }
 
-
+print '<footer>
+<p>&copy; ' . date('Y') . ' DIY PHP Website. All rights reserved.</p>
+</footer>';
